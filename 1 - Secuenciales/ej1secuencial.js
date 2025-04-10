@@ -4,28 +4,26 @@ const leer = require("prompt-sync")();
  * Funcion principal del programa
  */
 function main() {
-    let subeIdentificador = "def id";
+    let idSube = "def id sube";
     let saldoInicial = 0;
-    let medioPago = "def medio de pago";
-    let saldoRecarga = 0;
+    let medioPago = "def medio pago";
+    let montoCargar = 0;
     let saldoActual = 0;
-
-    console.log("Ingresa tu nombre o numero de tarjeta");
-    subeIdentificador = leer();
+    
+    console.log("Ingresa tu nombre o id de tarjeta");
+    idSube = leer();
     console.log("Ingresa saldo inicial");
     saldoInicial = Number(leer());
-    console.log("Ingresa medio de pago [mercadoCode - efectivo]");
+    console.log("ingresa medio pago [efectivo - tarjeta]");
     medioPago = leer();
-    console.log("Ingresa monto a cargar");
-    saldoRecarga = Number(leer());
-
-    saldoActual = saldoInicial + saldoRecarga;
-
-    console.log("Tarjeta sube de "+ subeIdentificador+" con saldo inicial de $"+saldoInicial+" opcion de pago "+medioPago+" incrementa su saldo en $"+saldoRecarga);
-
-    console.log("Saldo de tarjeta actual: $"+saldoActual);
-    console.log("Gracias por usar nuestros servicios!");
+    console.log("ingersa monto a cargar");
+    montoCargar = Number(leer());
     
+    saldoActual = saldoInicial + montoCargar
+    
+    console.log("### INFORME DE CARGA ###\n");
+    console.log("Tarjeta "+idSube+" con saldo inicial $"+saldoInicial+", medio de pago "+medioPago+" con monto a cargar de $"+montoCargar);
+    console.log("\tSaldo actual es de $"+saldoActual);
 }
 
 main();
