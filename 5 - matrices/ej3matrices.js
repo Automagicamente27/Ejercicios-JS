@@ -33,7 +33,10 @@ function main() {
     //posTareaEliminar = posTareaEliminar - 1;
     //posTareaEliminar-=1;
     posTareaEliminar--;
+
+    //elimina una tarea segun la posicion del dia seleccionado
     tareasSemana[posDiaIngresado].splice(posTareaEliminar, 1);
+
     console.log(tareasSemana);
 }
 
