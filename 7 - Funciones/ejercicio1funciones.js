@@ -13,10 +13,6 @@ const personajes = [
     "Luna Lovegood",
 ];
 
-
-
-
-
 function main() {
     let posImpostor = -1;
     let opcIngresada = -1;
@@ -28,21 +24,7 @@ function main() {
     evaluarFinal(opcIngresada, posImpostor);
 }
 
-
-
 main();
-
-
-
-
-
-
-
-
-
-
-
-
 
 /**
  * Evalua el final del juego dependiendo del numero ingresado por el usuario
